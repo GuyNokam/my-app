@@ -3,17 +3,18 @@ pipeline {
     stages {
         stage('---clean---') {
             steps {
-                sh "mvn clean"
+                bat "mvn clean"
+                bat " echo 'Tout le monde en parle'"
             }
         }
         stage('--test--') {
             steps {
-                sh "mvn test"
+                bat "mvn test"
             }
         }
         stage('--package--') {
             steps {
-                sh "mvn package"
+                bat "mvn package"
             }
         }
     }
